@@ -1,0 +1,54 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="wudofj2oIljug6l9RknZ">
+    <mxGraphModel dx="1991" dy="1087" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="WiaoqNWlVa7H6PUx5xVH-3" edge="1" parent="1" source="WiaoqNWlVa7H6PUx5xVH-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="WiaoqNWlVa7H6PUx5xVH-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WiaoqNWlVa7H6PUx5xVH-1" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=default;gradientColor=none;" value="&lt;div&gt;Source / OLTP Database&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;airline_source.db&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Passenger&lt;/div&gt;&lt;div&gt;Airport&lt;/div&gt;&lt;div&gt;Flight&lt;/div&gt;&lt;div&gt;Booking&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="160" x="280" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="WiaoqNWlVa7H6PUx5xVH-6" edge="1" parent="1" source="WiaoqNWlVa7H6PUx5xVH-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="WiaoqNWlVa7H6PUx5xVH-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WiaoqNWlVa7H6PUx5xVH-2" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;Staging Layer&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;stg_passenger&lt;/div&gt;&lt;div&gt;stg_airport&lt;/div&gt;&lt;div&gt;stg_flight&lt;/div&gt;&lt;div&gt;stg_booking&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="160" x="600" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="WiaoqNWlVa7H6PUx5xVH-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Extract &amp;amp; Load" vertex="1">
+          <mxGeometry height="30" width="90" x="470" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="WiaoqNWlVa7H6PUx5xVH-9" edge="1" parent="1" source="WiaoqNWlVa7H6PUx5xVH-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1160" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WiaoqNWlVa7H6PUx5xVH-5" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="Transformation / ETLData CleaningSCD Type 2 ProcessingSurrogate Key LookupDate TransformationCalculate total_amount" vertex="1">
+          <mxGeometry height="160" width="160" x="880" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="WiaoqNWlVa7H6PUx5xVH-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Transform" vertex="1">
+          <mxGeometry height="30" width="60" x="790" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="WiaoqNWlVa7H6PUx5xVH-12" edge="1" parent="1" source="WiaoqNWlVa7H6PUx5xVH-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="WiaoqNWlVa7H6PUx5xVH-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WiaoqNWlVa7H6PUx5xVH-8" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;Data Warehouse&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Dim_Passenger&lt;/div&gt;&lt;div&gt;Dim_Airport&lt;/div&gt;&lt;div&gt;Dim_Flight&lt;/div&gt;&lt;div&gt;Dim_Date&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Fact_Flight_Booking&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="160" x="1161" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="WiaoqNWlVa7H6PUx5xVH-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Load Dimensions &amp;amp; Fact" vertex="1">
+          <mxGeometry height="30" width="60" x="1070" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="WiaoqNWlVa7H6PUx5xVH-11" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;Analytics / Reporting&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Revenue by Flight&lt;/div&gt;&lt;div&gt;Revenue by Loyalty Tier&lt;/div&gt;&lt;div&gt;Revenue by Destination&lt;/div&gt;&lt;div&gt;Daily Booking Revenue&lt;/div&gt;&lt;div&gt;Revenue by Route&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="160" x="1440" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="WiaoqNWlVa7H6PUx5xVH-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="SQL Analytical Queries" vertex="1">
+          <mxGeometry height="30" width="70" x="1346" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="WiaoqNWlVa7H6PUx5xVH-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;h1&gt;Airline Flight Booking Data Warehouse&lt;br&gt;ETL Architecture&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="30" width="480" x="680" y="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

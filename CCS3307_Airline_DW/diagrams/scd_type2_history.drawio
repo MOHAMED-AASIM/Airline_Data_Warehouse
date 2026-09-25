@@ -1,0 +1,38 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="2OHL4VCjutC4m_HvTeQZ">
+    <mxGraphModel dx="1095" dy="1767" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="XOw9hSNd03FsJBfYxqtY-4" edge="1" parent="1" source="XOw9hSNd03FsJBfYxqtY-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="XOw9hSNd03FsJBfYxqtY-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XOw9hSNd03FsJBfYxqtY-1" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;Original Passenger Record&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Passenger ID: P001&lt;/div&gt;&lt;div&gt;Name: Kamal Perera&lt;/div&gt;&lt;div&gt;Loyalty Tier: Silver&lt;/div&gt;&lt;div&gt;is_current: 1&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="200" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="XOw9hSNd03FsJBfYxqtY-5" edge="1" parent="1" source="XOw9hSNd03FsJBfYxqtY-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="XOw9hSNd03FsJBfYxqtY-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XOw9hSNd03FsJBfYxqtY-7" edge="1" parent="1" source="XOw9hSNd03FsJBfYxqtY-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="XOw9hSNd03FsJBfYxqtY-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="400" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XOw9hSNd03FsJBfYxqtY-2" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;Source Change&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;P001 Loyalty Tier&lt;/div&gt;&lt;div&gt;Silver → Gold&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="200" x="280" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="XOw9hSNd03FsJBfYxqtY-3" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;Old Historical Record&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;passenger_sk: 1&lt;/div&gt;&lt;div&gt;passenger_id: P001&lt;/div&gt;&lt;div&gt;loyalty_tier: Silver&lt;/div&gt;&lt;div&gt;effective_start_date: 2026-09-19&lt;/div&gt;&lt;div&gt;effective_end_date: 2026-09-19&lt;/div&gt;&lt;div&gt;is_current: 0&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="200" x="600" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="XOw9hSNd03FsJBfYxqtY-6" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;New Current Record&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;passenger_sk: 11&lt;/div&gt;&lt;div&gt;passenger_id: P001&lt;/div&gt;&lt;div&gt;loyalty_tier: Gold&lt;/div&gt;&lt;div&gt;effective_start_date: 2026-09-19&lt;/div&gt;&lt;div&gt;effective_end_date: NULL&lt;/div&gt;&lt;div&gt;is_current: 1&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="200" x="600" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="XOw9hSNd03FsJBfYxqtY-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;h1&gt;Passenger Dimension&lt;br&gt;SCD Type 2 History Tracking&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="30" width="410" x="209" y="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

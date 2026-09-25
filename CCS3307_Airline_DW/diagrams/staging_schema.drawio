@@ -1,0 +1,28 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="iTzYK_JnDE0jvL7Nh00e">
+    <mxGraphModel dx="1685" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="B0AvA-4u2hBlLmi1vRPq-1" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;stg_passenger&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;passenger_id&lt;/div&gt;&lt;div&gt;passenger_name&lt;/div&gt;&lt;div&gt;gender&lt;/div&gt;&lt;div&gt;nationality&lt;/div&gt;&lt;div&gt;loyalty_tier&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="160" x="560" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="B0AvA-4u2hBlLmi1vRPq-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;h1&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;Airline Flight Booking Data Warehouse&lt;br&gt;&lt;/span&gt;Staging Schema&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="30" width="480" x="240" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="B0AvA-4u2hBlLmi1vRPq-3" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;stg_airport&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;airport_code&lt;/div&gt;&lt;div&gt;airport_name&lt;/div&gt;&lt;div&gt;city&lt;/div&gt;&lt;div&gt;country&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="160" x="200" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="B0AvA-4u2hBlLmi1vRPq-4" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;stg_flight&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;flight_id&lt;/div&gt;&lt;div&gt;flight_number&lt;/div&gt;&lt;div&gt;departure_airport&lt;/div&gt;&lt;div&gt;arrival_airport&lt;/div&gt;&lt;div&gt;flight_date&lt;/div&gt;&lt;div&gt;aircraft_type&lt;/div&gt;&lt;div&gt;distance_km&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="160" x="560" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="B0AvA-4u2hBlLmi1vRPq-5" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;stg_booking&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;booking_id&lt;/div&gt;&lt;div&gt;passenger_id&lt;/div&gt;&lt;div&gt;flight_id&lt;/div&gt;&lt;div&gt;booking_date&lt;/div&gt;&lt;div&gt;ticket_fare&lt;/div&gt;&lt;div&gt;taxes_and_fees&lt;/div&gt;&lt;div&gt;baggage_weight_kg&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="160" x="200" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="B0AvA-4u2hBlLmi1vRPq-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;div&gt;Staging Layer:&lt;/div&gt;&lt;div&gt;Temporary storage of extracted source data before&lt;/div&gt;&lt;div&gt;transformation and loading into the Data Warehouse.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="320" x="320" y="640" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

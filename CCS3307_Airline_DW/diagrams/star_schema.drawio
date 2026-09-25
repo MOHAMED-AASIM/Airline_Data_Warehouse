@@ -1,0 +1,61 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="GgX0U3eF7629pMbqIBTo">
+    <mxGraphModel dx="2196" dy="748" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="opKHC-szIZfC8rfPK9N_-1" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;Fact_Flight_Booking&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;PK: booking_sk&lt;/div&gt;&lt;div&gt;booking_id&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;FK: passenger_sk&lt;/div&gt;&lt;div&gt;FK: flight_sk&lt;/div&gt;&lt;div&gt;FK: departure_airport_sk&lt;/div&gt;&lt;div&gt;FK: arrival_airport_sk&lt;/div&gt;&lt;div&gt;FK: booking_date_sk&lt;/div&gt;&lt;div&gt;FK: flight_date_sk&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;ticket_fare&lt;/div&gt;&lt;div&gt;taxes_and_fees&lt;/div&gt;&lt;div&gt;baggage_weight_kg&lt;/div&gt;&lt;div&gt;distance_km&lt;/div&gt;&lt;div&gt;total_amount&lt;/div&gt;" vertex="1">
+          <mxGeometry height="280" width="280" x="240" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="opKHC-szIZfC8rfPK9N_-3" edge="1" parent="1" source="opKHC-szIZfC8rfPK9N_-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="opKHC-szIZfC8rfPK9N_-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="opKHC-szIZfC8rfPK9N_-2" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;Dim_Passenger&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;PK: passenger_sk&lt;/div&gt;&lt;div&gt;passenger_id&lt;/div&gt;&lt;div&gt;passenger_name&lt;/div&gt;&lt;div&gt;gender&lt;/div&gt;&lt;div&gt;nationality&lt;/div&gt;&lt;div&gt;loyalty_tier&lt;/div&gt;&lt;div&gt;effective_start_date&lt;/div&gt;&lt;div&gt;effective_end_date&lt;/div&gt;&lt;div&gt;is_current&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="200" x="-120" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="opKHC-szIZfC8rfPK9N_-5" edge="1" parent="1" source="opKHC-szIZfC8rfPK9N_-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="opKHC-szIZfC8rfPK9N_-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="opKHC-szIZfC8rfPK9N_-4" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;Dim_Flight&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;PK: flight_sk&lt;/div&gt;&lt;div&gt;flight_id&lt;/div&gt;&lt;div&gt;flight_number&lt;/div&gt;&lt;div&gt;aircraft_type&lt;/div&gt;&lt;div&gt;distance_km&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="200" x="680" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="opKHC-szIZfC8rfPK9N_-7" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="opKHC-szIZfC8rfPK9N_-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="690" y="650.0666666666666" as="sourcePoint" />
+            <mxPoint x="360" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="opKHC-szIZfC8rfPK9N_-8" edge="1" parent="1" source="opKHC-szIZfC8rfPK9N_-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.721;entryY=1.007;entryDx=0;entryDy=0;entryPerimeter=0;" target="opKHC-szIZfC8rfPK9N_-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="opKHC-szIZfC8rfPK9N_-6" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;Dim_Airport&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;PK: airport_sk&lt;/div&gt;&lt;div&gt;airport_code&lt;/div&gt;&lt;div&gt;airport_name&lt;/div&gt;&lt;div&gt;city&lt;/div&gt;&lt;div&gt;country&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="200" x="640" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="opKHC-szIZfC8rfPK9N_-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="departure_airport_sk" vertex="1">
+          <mxGeometry height="30" width="150" x="460" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="opKHC-szIZfC8rfPK9N_-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="arrival_airport_sk" vertex="1">
+          <mxGeometry height="30" width="150" x="450" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="opKHC-szIZfC8rfPK9N_-20" edge="1" parent="1" source="opKHC-szIZfC8rfPK9N_-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" target="opKHC-szIZfC8rfPK9N_-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="opKHC-szIZfC8rfPK9N_-21" edge="1" parent="1" source="opKHC-szIZfC8rfPK9N_-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" target="opKHC-szIZfC8rfPK9N_-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="opKHC-szIZfC8rfPK9N_-11" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;Dim_Date&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;PK: date_sk&lt;/div&gt;&lt;div&gt;full_date&lt;/div&gt;&lt;div&gt;day&lt;/div&gt;&lt;div&gt;month&lt;/div&gt;&lt;div&gt;month_name&lt;/div&gt;&lt;div&gt;quarter&lt;/div&gt;&lt;div&gt;year&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="200" x="-80" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="opKHC-szIZfC8rfPK9N_-22" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="booking_date_sk" vertex="1">
+          <mxGeometry height="30" width="150" x="130" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="opKHC-szIZfC8rfPK9N_-23" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="flight_date_sk" vertex="1">
+          <mxGeometry height="30" width="150" x="110" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="opKHC-szIZfC8rfPK9N_-24" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;h1&gt;&lt;font style=&quot;font-size: 30px;&quot;&gt;Airline Flight Booking Data Warehouse&lt;br&gt;Star Schema&lt;/font&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="30" width="630" x="90" y="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

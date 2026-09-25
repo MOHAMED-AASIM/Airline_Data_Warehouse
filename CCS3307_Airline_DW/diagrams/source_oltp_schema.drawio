@@ -1,0 +1,57 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="W5BstHLFVrfm-yXCmoK2">
+    <mxGraphModel dx="1369" dy="1917" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qyhRWGOPnNtDWX_wydja-5" edge="1" parent="1" source="qyhRWGOPnNtDWX_wydja-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="qyhRWGOPnNtDWX_wydja-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qyhRWGOPnNtDWX_wydja-1" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;Passenger&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;PK: passenger_id&lt;/div&gt;&lt;div&gt;passenger_name&lt;/div&gt;&lt;div&gt;gender&lt;/div&gt;&lt;div&gt;nationality&lt;/div&gt;&lt;div&gt;loyalty_tier&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="160" x="320" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="qyhRWGOPnNtDWX_wydja-7" edge="1" parent="1" source="qyhRWGOPnNtDWX_wydja-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="qyhRWGOPnNtDWX_wydja-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="640" y="530" />
+              <mxPoint x="160" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qyhRWGOPnNtDWX_wydja-2" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;Airport&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;PK: airport_code&lt;/div&gt;&lt;div&gt;airport_name&lt;/div&gt;&lt;div&gt;city&lt;/div&gt;&lt;div&gt;country&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="160" x="560" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="qyhRWGOPnNtDWX_wydja-6" edge="1" parent="1" source="qyhRWGOPnNtDWX_wydja-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="qyhRWGOPnNtDWX_wydja-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="40" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qyhRWGOPnNtDWX_wydja-3" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;Flight&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;PK: flight_id&lt;/div&gt;&lt;div&gt;flight_number&lt;/div&gt;&lt;div&gt;FK: departure_airport&lt;/div&gt;&lt;div&gt;FK: arrival_airport&lt;/div&gt;&lt;div&gt;flight_date&lt;/div&gt;&lt;div&gt;aircraft_type&lt;/div&gt;&lt;div&gt;distance_km&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="160" x="80" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="qyhRWGOPnNtDWX_wydja-4" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;Booking&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;PK: booking_id&lt;/div&gt;&lt;div&gt;FK: passenger_id&lt;/div&gt;&lt;div&gt;FK: flight_id&lt;/div&gt;&lt;div&gt;booking_date&lt;/div&gt;&lt;div&gt;ticket_fare&lt;/div&gt;&lt;div&gt;taxes_and_fees&lt;/div&gt;&lt;div&gt;baggage_weight_kg&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="160" x="320" as="geometry" />
+        </mxCell>
+        <mxCell id="qyhRWGOPnNtDWX_wydja-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="arrival_airport" vertex="1">
+          <mxGeometry height="30" width="60" x="340" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="qyhRWGOPnNtDWX_wydja-9" edge="1" parent="1" source="qyhRWGOPnNtDWX_wydja-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.707;entryY=1.018;entryDx=0;entryDy=0;entryPerimeter=0;" target="qyhRWGOPnNtDWX_wydja-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="480" />
+              <mxPoint x="193.1" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qyhRWGOPnNtDWX_wydja-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="departure_airport" vertex="1">
+          <mxGeometry height="30" width="60" x="350" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="qyhRWGOPnNtDWX_wydja-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;h1&gt;Airline Flight Booking System&lt;br&gt;Source / OLTP Schema&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="30" width="460" x="190" y="-80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
