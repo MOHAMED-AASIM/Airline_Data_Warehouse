@@ -529,7 +529,6 @@ Add Booking
 Refresh Data
 ```
 
-**Important:** Replace `https://drive.google.com/file/d/1Y83yb6oovMWwlWt0Z7xKDWC9SZppbL_K/view?usp=drive_link` with your real short video URL before pushing to GitHub.
 
 ---
 
