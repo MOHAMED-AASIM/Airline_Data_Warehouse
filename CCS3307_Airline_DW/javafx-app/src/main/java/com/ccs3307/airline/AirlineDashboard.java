@@ -40,7 +40,22 @@ import java.nio.file.Path;
 import java.util.List;
 
 public class AirlineDashboard extends Application {
-    private static final String DATABASE_URL = "jdbc:sqlite:../db/airline_warehouse.db";
+    private static final String DEFAULT_DATABASE_URL = "jdbc:sqlite:../db/airline_warehouse.db";
+
+    private static Connection getConnection() throws SQLException {
+        Path[] candidatePaths = new Path[]{
+            Path.of("../db/airline_warehouse.db"),
+            Path.of("db/airline_warehouse.db"),
+            Path.of("CCS3307_Airline_DW/db/airline_warehouse.db"),
+            Path.of("../CCS3307_Airline_DW/db/airline_warehouse.db")
+        };
+        for (Path candidate : candidatePaths) {
+            if (Files.exists(candidate) && Files.isRegularFile(candidate) && candidate.toFile().length() > 0) {
+                return DriverManager.getConnection("jdbc:sqlite:" + candidate.toAbsolutePath().toString().replace("\\", "/"));
+            }
+        }
+        return DriverManager.getConnection(DEFAULT_DATABASE_URL);
+    }
 
     private final List<Report> reports = List.of(
         new Report("Revenue by Flight", """
@@ -151,7 +166,7 @@ public class AirlineDashboard extends Application {
 
     private void loadDashboard(FlowPane metrics, ComboBox<String> reportSelector,
                                 StackPane tableHost, Label status) {
-        try (Connection connection = DriverManager.getConnection(DATABASE_URL)) {
+        try (Connection connection = getConnection()) {
             Summary summary = summary(connection);
             metrics.getChildren().setAll(
                 metricCard("BOOKINGS", String.valueOf(count(connection, "Fact_Flight_Booking"))),
@@ -172,7 +187,11 @@ public class AirlineDashboard extends Application {
             tableHost.getChildren().setAll(table);
             status.setText("Showing " + table.getItems().size() + " rows - updated just now");
         } catch (SQLException exception) {
-            Label error = new Label("Could not refresh the warehouse: " + exception.getMessage());
+            String msg = exception.getMessage();
+            if (msg != null && msg.contains("no such table")) {
+                msg += " (Warehouse DB empty/uninitialized. Run 'python etl/etl_pipeline.py' first)";
+            }
+            Label error = new Label("Could not refresh the warehouse: " + msg);
             error.setStyle("-fx-text-fill: #b42318; -fx-font-size: 14px;");
             tableHost.getChildren().setAll(error);
             status.setText("Refresh failed");
@@ -212,7 +231,7 @@ public class AirlineDashboard extends Application {
             if (bookingId.isBlank()) {
                 return;
             }
-            try (Connection connection = DriverManager.getConnection(DATABASE_URL);
+            try (Connection connection = getConnection();
                  var statement = connection.prepareStatement("""
                      SELECT fb.booking_id, p.passenger_name, f.flight_number, d.full_date,
                             fb.ticket_fare, fb.taxes_and_fees, fb.total_amount
@@ -249,7 +268,7 @@ public class AirlineDashboard extends Application {
             return;
         }
         Report report = reports.stream().filter(item -> item.name().equals(reportName)).findFirst().orElse(reports.get(0));
-        try (Connection connection = DriverManager.getConnection(DATABASE_URL);
+        try (Connection connection = getConnection();
              Statement statement = connection.createStatement();
              ResultSet result = statement.executeQuery(report.sql());
              BufferedWriter writer = Files.newBufferedWriter(output, StandardCharsets.UTF_8)) {
@@ -293,7 +312,7 @@ public class AirlineDashboard extends Application {
         TextField fees = new TextField("0");
         TextField baggage = new TextField("0");
 
-        try (Connection connection = DriverManager.getConnection(DATABASE_URL);
+        try (Connection connection = getConnection();
              Statement statement = connection.createStatement();
              ResultSet passengers = statement.executeQuery("SELECT DISTINCT passenger_id FROM Dim_Passenger WHERE is_current = 1 ORDER BY passenger_id")) {
             while (passengers.next()) {
@@ -305,7 +324,7 @@ public class AirlineDashboard extends Application {
             return false;
         }
 
-        try (Connection connection = DriverManager.getConnection(DATABASE_URL);
+        try (Connection connection = getConnection();
              Statement statement = connection.createStatement();
              ResultSet flights = statement.executeQuery("""
                  SELECT DISTINCT f.flight_id || ' - ' || f.flight_number
@@ -365,7 +384,7 @@ public class AirlineDashboard extends Application {
 
         String flightId = flightOption.substring(0, flightOption.indexOf(" - "));
         int dateKey = date.getYear() * 10000 + date.getMonthValue() * 100 + date.getDayOfMonth();
-        try (Connection connection = DriverManager.getConnection(DATABASE_URL)) {
+        try (Connection connection = getConnection()) {
             connection.setAutoCommit(false);
             try {
                 int passengerSk = lookupKey(connection, "SELECT passenger_sk FROM Dim_Passenger WHERE passenger_id = ? AND is_current = 1", passengerId);
