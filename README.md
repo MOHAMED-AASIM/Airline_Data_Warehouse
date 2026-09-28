@@ -11,7 +11,7 @@ A complete **Airline Flight Booking Data Warehouse and Business Intelligence Das
 
 > Watch the short project demonstration to see the main features and workflow.
 
-[![YouTube Demo](https://img.youtube.com/vi/vPb66X6VR24/maxresdefault.jpg)](https://youtu.be/vPb66X6VR24)
+
 
 🔴 **[▶️ Watch on YouTube](https://youtu.be/vPb66X6VR24)**
 ---
