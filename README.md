@@ -9,9 +9,9 @@ A complete **Airline Flight Booking Data Warehouse and Business Intelligence Das
 
 ### 🎥 Demo Video
 **Watch the short project demo:**  
-`PASTE-YOUR-SHORT-DEMO-LINK-HERE`
+`https://youtu.be/vPb66X6VR24`
 
-> Replace the placeholder with your actual short YouTube/Google Drive demo link, for example `https://youtu.be/XXXXXXXXXXX`.
+> Replace the placeholder with your actual short YouTube/Google Drive demo link, for example `https://youtu.be/vPb66X6VR24`.
 
 ---
 
@@ -501,11 +501,7 @@ Test the following:
 
 ---
 
-# 17. Demo Video
 
-🎥 **[Watch the Airline Data Warehouse Demo](https://drive.google.com/file/d/1Y83yb6oovMWwlWt0Z7xKDWC9SZppbL_K/view?usp=drive_link)**
-
-Recommended demo order:
 
 ```text
 Project structure
@@ -591,5 +587,4 @@ It provides historical and business-oriented analysis of airline bookings, reven
 **GitHub:**  
 https://github.com/MOHAMED-AASIM/Airline_Data_Warehouse
 
-**Demo:**  
-`https://drive.google.com/file/d/1Y83yb6oovMWwlWt0Z7xKDWC9SZppbL_K/view?usp=drive_link`
+
